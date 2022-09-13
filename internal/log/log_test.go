@@ -77,6 +77,7 @@ func testInitExisting(t *testing.T, o *Log) {
 	off, err = n.LowestOffset()
 	require.NoError(t, err)
 	require.Equal(t, uint64(0), off)
+	off, err = n.HighestOffset()
 	require.NoError(t, err)
 	require.Equal(t, uint64(2), off)
 }
