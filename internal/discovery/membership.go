@@ -44,6 +44,7 @@ func (m *Membership) setupSerf() (err error) {
 	config.MemberlistConfig.BindAddr = addr.IP.String()
 	config.MemberlistConfig.BindPort = addr.Port
 	m.events = make(chan serf.Event)
+	config.Tags = m.Tags
 	config.EventCh = m.events
 	config.NodeName = m.Config.NodeName
 	m.serf, err = serf.Create(config)
