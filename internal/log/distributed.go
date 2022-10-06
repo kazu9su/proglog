@@ -10,10 +10,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/golang/protobuf/proto"
 	"github.com/hashicorp/raft"
-	raftboltdb "github.com/hashicorp/raft-boltdb"
+	raftboltdb "github.com/hashicorp/raft-boltdb/v2"
 	api "github.com/kazu9su/proglog/api/v1"
+	"google.golang.org/protobuf/proto"
 )
 
 type DistributedLog struct {
@@ -165,7 +165,7 @@ func (l *DistributedLog) apply(reqType RequestType, req proto.Message) (
 		return nil, future.Error()
 	}
 	res := future.Response()
-	if err, ok := res.(error); !ok {
+	if err, ok := res.(error); ok {
 		return nil, err
 	}
 	return res, nil

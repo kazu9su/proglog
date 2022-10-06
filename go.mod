@@ -20,6 +20,8 @@ require (
 	google.golang.org/protobuf v1.28.1
 )
 
+require go.etcd.io/bbolt v1.3.5 // indirect
+
 require (
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible // indirect
 	github.com/armon/go-metrics v0.3.8 // indirect
@@ -35,9 +37,11 @@ require (
 	github.com/hashicorp/go-sockaddr v1.0.0 // indirect
 	github.com/hashicorp/golang-lru v0.5.0 // indirect
 	github.com/hashicorp/memberlist v0.1.3 // indirect
+	github.com/hashicorp/raft-boltdb/v2 v2.2.2
 	github.com/miekg/dns v1.0.14 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sean-/seed v0.0.0-20170313163322-e2103e2c3529 // indirect
+	github.com/soheilhy/cmux v0.1.5
 	go.uber.org/atomic v1.4.0 // indirect
 	go.uber.org/multierr v1.1.0 // indirect
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
